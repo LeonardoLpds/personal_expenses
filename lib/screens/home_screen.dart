@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double topHeight = size.height / 3;
+    final double topHeight = size.height * 0.40;
 
     return Container(
       decoration: BoxDecoration(
@@ -52,7 +52,58 @@ class _HomeScreenState extends State<HomeScreen> {
               fit: BoxFit.fill,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [Text("Outubro"), Text("R\$ 300")],
+                children: [
+                  Text(
+                    "Outubro",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline5!
+                        .copyWith(color: Colors.white),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "R\$ 3.120,76",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline2!
+                        .copyWith(color: Colors.white),
+                  ),
+                  Stack(
+                    alignment: Alignment.centerLeft,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade400,
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(50),
+                          ),
+                        ),
+                        height: 5,
+                        width: size.width,
+                      ),
+                      Container(
+                        decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 10,
+                            )
+                          ],
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(50),
+                          ),
+                        ),
+                        margin: const EdgeInsets.all(15),
+                        height: 20,
+                        width: size.width * 0.68,
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
