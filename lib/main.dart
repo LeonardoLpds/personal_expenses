@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Despesas Pessoais',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
-        primaryColorLight: Colors.pink.shade300,
+        primarySwatch: Colors.lightBlue,
+        primaryColorLight: Colors.lightBlue.shade300,
       ),
       home: const MainLayout(),
     );

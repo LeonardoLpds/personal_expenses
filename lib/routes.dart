@@ -22,7 +22,7 @@ final pages = [
   AppScreens(
     path: "/home",
     screen: const HomeScreen(),
-    title: "Geral",
+    title: "Atual",
     icon: const Icon(Icons.bar_chart),
   ),
   AppScreens(
